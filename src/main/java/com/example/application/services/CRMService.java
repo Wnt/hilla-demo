@@ -41,7 +41,9 @@ public class CRMService {
             @NotNull
             CompanyRecord company,
 
-            LocalTime wakeupTime
+            LocalTime wakeupTime,
+
+            LocalTime sleepyTime
     ) {
     }
 
@@ -63,7 +65,8 @@ public class CRMService {
                         c.getCompany().getId(),
                         c.getCompany().getName()
                 ),
-                c.getWakeupTime()
+                c.getWakeupTime(),
+                c.getSleepyTime()
         );
     }
 
@@ -94,6 +97,7 @@ public class CRMService {
         dbContact.setEmail(contact.email);
         dbContact.setCompany(company);
         dbContact.setWakeupTime(contact.wakeupTime);
+        dbContact.setSleepyTime(contact.sleepyTime);
 
         var saved = contactRepository.save(dbContact);
 

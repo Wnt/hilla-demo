@@ -27,15 +27,18 @@ public class Contact extends AbstractEntity {
 
     private LocalTime wakeupTime;
 
+    private LocalTime sleepyTime;
+
     public Contact() {
     }
 
-    public Contact(String firstName, String lastName, String email, Company company, LocalTime wakeupTime) {
+    public Contact(String firstName, String lastName, String email, Company company, LocalTime wakeupTime, LocalTime sleepyTime) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.company = company;
         this.wakeupTime = wakeupTime;
+        this.sleepyTime = sleepyTime;
     }
 
     public String getFirstName() {
@@ -76,6 +79,14 @@ public class Contact extends AbstractEntity {
 
     public void setWakeupTime(LocalTime wakeupTime) {
         this.wakeupTime = wakeupTime;
+    }
+
+    public LocalTime getSleepyTime() {
+        return sleepyTime;
+    }
+
+    public void setSleepyTime(LocalTime sleepyTime) {
+        this.sleepyTime = sleepyTime;
     }
 
 }

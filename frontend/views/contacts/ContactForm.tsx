@@ -47,6 +47,7 @@ export default function ContactForm({contact, onSubmit}: ContactFormProps) {
             <EmailField label="Email" {...field(model.email)} />
             <Select label="Company" items={companies} {...field(model.company.id)} />
             <TimePicker label="Wakeup time" {...field(model.wakeupTime)} />
+            <TimePicker label="Sleepy time" {...field(model.sleepyTime)} />
 
             <div className="flex gap-m">
                 <Button onClick={submit} theme="primary">Save</Button>
