@@ -1,5 +1,9 @@
 package com.example.application.data;
 
+import java.sql.Time;
+import java.time.LocalTime;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Email;
@@ -21,14 +25,17 @@ public class Contact extends AbstractEntity {
     @ManyToOne
     private Company company;
 
+    private LocalTime wakeupTime;
+
     public Contact() {
     }
 
-    public Contact(String firstName, String lastName, String email, Company company) {
+    public Contact(String firstName, String lastName, String email, Company company, LocalTime wakeupTime) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.company = company;
+        this.wakeupTime = wakeupTime;
     }
 
     public String getFirstName() {
@@ -61,6 +68,14 @@ public class Contact extends AbstractEntity {
 
     public void setCompany(Company company) {
         this.company = company;
+    }
+
+    public LocalTime getWakeupTime() {
+        return wakeupTime;
+    }
+
+    public void setWakeupTime(LocalTime wakeupTime) {
+        this.wakeupTime = wakeupTime;
     }
 
 }

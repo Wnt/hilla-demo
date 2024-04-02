@@ -4,8 +4,9 @@ INSERT INTO "COMPANY" (ID, VERSION, NAME) VALUES
 (8, 1, 'Laboratory Corporation of America Holdings'),
 (9, 1, 'AutoZone, Inc.'),
 (10, 1, 'Linens ''n Things Inc.');   
+INSERT INTO "CONTACT" (ID, VERSION, EMAIL,FIRST_NAME,LAST_NAME,COMPANY_ID,WAKEUP_TIME) VALUES
+(11, 1, 'eula.lane@jigrormo.ye', 'Eula', 'Lane', 8, '08:15');
 INSERT INTO "CONTACT" (ID, VERSION, EMAIL,FIRST_NAME,LAST_NAME,COMPANY_ID) VALUES
-(11, 1, 'eula.lane@jigrormo.ye', 'Eula', 'Lane', 8),
 (12, 1, 'barry.rodriquez@zun.mm', 'Barry', 'Rodriquez', 7),
 (13, 1, 'eugenia.selvi@capfad.vn', 'Eugenia', 'Selvi', 6),
 (14, 1, 'alejandro.miles@dec.bn', 'Alejandro', 'Miles', 10),
